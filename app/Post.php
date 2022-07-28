@@ -18,10 +18,15 @@ class Post extends Model
         return $this->belongsToMany('App\Tag');
     }
 
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+
 
     use HasSlug;
 
-    protected $guarded =['slug','tags'];
+    protected $guarded =['slug','tags', 'user_id'];
     /**
      * Get the options for generating the slug.
      */
