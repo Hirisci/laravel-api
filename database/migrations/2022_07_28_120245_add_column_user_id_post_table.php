@@ -14,7 +14,7 @@ class AddColumnUserIdPostTable extends Migration
     public function up()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->foreignId('user_id')->nullable()->after('is_public')->constrained()->onDelete('set null');
+            $table->foreignId('user_id')->nullable()->after('is_public')->constrained()->onDelete('cascade');
 
         });
     }

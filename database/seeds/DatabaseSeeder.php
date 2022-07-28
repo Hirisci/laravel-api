@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
             PostsTableSeeder::class,
             CategoriesTableSeeder::class,
             TagsSeeder::class,
+            UserForeignIdSeeder::class,
          ]);
     }
 }
